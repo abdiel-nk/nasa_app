@@ -4,20 +4,29 @@
 
 function tres () {
     console.log("tres")
-    cuatro()
+    setTimeout(cuatro,2000)
 }
 
 function dos () {
     console.log("dos")
-    tres()
+   setTimeout(tres,2000)
 }
 
-function uno () {
+function uno (dos) {
     console.log("uno")
-    dos()
+    setTimeout(dos,2000)
 }
 
-uno()
+setTimeout(()=> uno(dos)
+, 5000);
+
+//callback 
 
 
+const nombre=function (){
+    console.log("nombre");
+}
+nombre()
+const persona = ()=> console.log("Abdiel");
+persona();
 
